@@ -1,29 +1,58 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <h1>{{h1}}</h1>
+    <h2 class="h2" v-text="h2"></h2>
+    <h3 v-html="h3"></h3>
+    <h4 v-html="h4"></h4>
+    <hr>
+    <router-link to='/computed'>计算属性</router-link>
+    <br>
+    <router-link to='/watch'>watch监听器</router-link>
+    <br>
+    <router-link to='/vBind'>v-bind属性</router-link>
+    <br>
+    <router-link to='/filter'>过滤器filter</router-link>
+    <br>
+    <router-link to='/props'>父传子props</router-link>
+    <br>
+    <router-link to='/emit'>子传父emit</router-link>
+    <br>
+    <router-link to='/bus'>组件间传值bus中线</router-link>
+    <br>
+    <router-link to='/pubsub'>组件间传值pubsub消息订阅与发布</router-link>
+    <br>
+    <router-link to='/slot'>slot插槽父组件向子组件传递`标签数据`</router-link>
+
+
+    <router-view></router-view>
   </div>
 </template>
 
-<style lang="less">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
+<script>
+export default {
+  data() {
+    return {
+      h1:'vue测试',
+      h2:'渲染数据的第二种写法v-text',
+      h3:'<div style="color:red;">渲染数据的第三种写法v-html</div>',
+      h4:'<a href="javascript:;" >样式控制a标签</a>'
     }
   }
 }
+</script>
+<style lang="less" scoped>
+  .h2{
+    font-weight: 400;
+  }
+  h4{
+    &::v-deep a{
+     color: hotpink;
+     font-weight: 600;
+   }
+  }
+  h4{
+    /deep/ a{
+      color: green;
+    }
+  }
 </style>
