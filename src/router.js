@@ -4,6 +4,7 @@ import Router from 'vue-router'
 Vue.use(Router)
 
 export default new Router({
+  mode: 'hash',
   routes: [
     {
       path: '/computed',
@@ -48,8 +49,29 @@ export default new Router({
     },
     {
       path: '/slot',
-      name: 'name',
+      name: 'slot',
       component: () => {return import('./views/slot/parent.vue')}
+    },
+    {
+      path: '/axios',
+      name: 'axios',
+      component: () => {return import('./views/axios/index.vue')}
+    },
+    // 下面开始路由的更多使用方式
+    {
+      path: '/router',
+      name: 'router',
+      component: () => {return import('./views/router/index.vue')}
+    },
+    {//动态路由
+      path: '/dynRouter/:id',
+      name: 'dynRouter',
+      component: () => {return import('./views/router/dynRouter.vue')}
+    },
+    {//动态路由get传参
+      path: '/getParamsRoute',
+      name: 'getParamsRoute',
+      component: () => {return import('./views/router/getParamsRoute.vue')}
     }
     // {
     //   path: '/about',

@@ -22,6 +22,12 @@
     <router-link to='/pubsub'>组件间传值pubsub消息订阅与发布</router-link>
     <br>
     <router-link to='/slot'>slot插槽父组件向子组件传递`标签数据`</router-link>
+    <br>
+    <router-link to='/axios'>axios请求数据</router-link>
+    <br>
+    <router-link to='/router'>router路由</router-link>
+    <br>
+    
 
 
     <router-view></router-view>
@@ -35,7 +41,7 @@ export default {
       h1:'vue测试',
       h2:'渲染数据的第二种写法v-text',
       h3:'<div style="color:red;">渲染数据的第三种写法v-html</div>',
-      h4:'<a href="javascript:;" >样式控制a标签</a>'
+      h4:'<a href="javascript:;" >样式控制a标签</a>',
     }
   }
 }
