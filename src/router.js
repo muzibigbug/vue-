@@ -63,15 +63,30 @@ export default new Router({
       name: 'router',
       component: () => {return import('./views/router/index.vue')}
     },
-    {//动态路由
+    {//动态路由(在url中出现参数)
       path: '/dynRouter/:id',
       name: 'dynRouter',
       component: () => {return import('./views/router/dynRouter.vue')}
     },
-    {//动态路由get传参
+    {//动态路由get传参(在url中出现参数)
       path: '/getParamsRoute',
       name: 'getParamsRoute',
       component: () => {return import('./views/router/getParamsRoute.vue')}
+    },
+    {//命名路由(在url中看不到参数)
+      path: '/nameRouter',
+      name: 'nameRouter',
+      component: () => {return import('./views/router/nameRouter.vue')}
+    },
+    {//命名路由传参(在url中看不到参数)
+      path: '/nameRouterParams',
+      name: 'nameRouterParams',
+      component: () => {return import('./views/router/nameRouterParams.vue')}
+    },
+    {//命名路由传参query(在url中看不到参数)
+      path: '/nameRouterQuery',
+      name: 'nameRouterQuery',
+      component: () => {return import('./views/router/nameRouterQuery.vue')}
     }
     // {
     //   path: '/about',
