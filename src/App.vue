@@ -27,10 +27,16 @@
     <br>
     <router-link to='/router'>router路由</router-link>
     <br>
+    <router-link to="/redirect">redirect重定向路由</router-link>
+    <br>
+    <!-- 跳转'/aa/实质是跳转到'/alias' -->
+    <router-link to="/aa">alias别名路由</router-link>
     
 
-
     <router-view></router-view>
+    <!-- 视图的占位符 -->
+    <router-view name='viewRouterPL'></router-view>
+    <router-view name="viewRouterPL_first"></router-view>
   </div>
 </template>
 

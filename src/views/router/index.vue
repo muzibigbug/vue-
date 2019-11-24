@@ -11,6 +11,11 @@
         <button @click.stop="sendNameRouterParams">点击事件进行命名路由传值</button>
         <br>
         <router-link :to="{path: '/nameRouterQuery', query: {queryID: 55}}">命名路由query传参（to是一个对象）</router-link>
+        <br>
+        <router-link to="/nestRouter">嵌套路由children</router-link>
+        <br>
+        <router-link to="/viewRouter">视图路由components</router-link>
+        
     </div>
 </template>
 <script>
