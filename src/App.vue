@@ -31,6 +31,10 @@
     <br>
     <!-- 跳转'/aa/实质是跳转到'/alias' -->
     <router-link to="/aa">alias别名路由</router-link>
+    <br>
+    <router-link to='/routeGuard'>路由守卫之一beforeEnter</router-link>
+    <br>
+    <router-link to='/componentGuard'>组件守卫---beforeRouteEnter</router-link>
     
 
     <router-view></router-view>

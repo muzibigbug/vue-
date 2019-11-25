@@ -3,11 +3,12 @@ import Router from 'vue-router'
 
 Vue.use(Router)
 
-export default new Router({
+let router = new Router({
     mode: 'hash',
     routes: [{
             path: '/computed',
             name: 'computed',
+            redirect: '/',
             component: () => { return import ('./views/computed.vue') }
         },
         {
@@ -140,13 +141,43 @@ export default new Router({
             alias: '/aa',
             name: 'alias',
             component: () => { return import ('./views/router/aliasRouter/index.vue') }
+        },
+        {//路由守卫---路由独享的守卫beforeEnter
+          path: '/routeGuard',
+          name: 'routeGuard',
+          meta: {
+            flg: true
+          },
+          component: () => {return import('./views/router/routeGuard/index.vue')},
+          beforeEnter(to,from,next) {
+            if(to.meta.flg) {
+              alert('路由独享的守卫之一beforeEnter')
+              next()
+            }else {
+              next()
+            }
+          }
+        },
+        {//路由守卫---路由组件的守卫beforeRouteEnter
+          path: '/componentGuard',
+          name: 'componentGuard',
+          meta: {
+            flg: true
+          },
+          component: () => {return import('./views/router/routeGuard/componentGuard.vue')}
         }
-        // {
-        //   path: '/about',
-        //   name: 'about',
-        //   component: function () { 
-        //     return import(/* webpackChunkName: "about" */ './views/About.vue')
-        //   }
-        // }
+       
     ]
 })
+//全局路由守卫beforeEach
+router.beforeEach((to,from,next) => {
+  console.log('to',to)
+  console.log('from',from)
+  if(to.path === '/'){
+    console.log('全局路由守卫/')
+  }else {
+    next();
+  }
+})
+
+export default router;
