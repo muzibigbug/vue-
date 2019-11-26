@@ -38,8 +38,10 @@
     <br>
     <router-link to='/metaRoute'>路由元信息meta</router-link>
     
-
-    <router-view></router-view>
+    <keep-alive>
+      <router-view v-if="$route.meta.keepAlive"></router-view>
+    </keep-alive>
+    <router-view v-if="!$route.meta.keepAlive"></router-view>
     <!-- 视图的占位符 -->
     <router-view name='viewRouterPL'></router-view>
     <router-view name="viewRouterPL_first"></router-view>

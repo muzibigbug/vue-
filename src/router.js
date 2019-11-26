@@ -170,6 +170,7 @@ let router = new Router({
             path: '/metaRoute',
             name: 'metaRoute',
             meta: {
+                keepAlive: true,//是否局部路由缓存
                 requiresAuth: true
             },
             component: () => {return import('./views/router/metaRoute/index.vue')}
