@@ -5,7 +5,7 @@ Vue.use(Router)
 
 let router = new Router({
     mode: 'hash',
-    routes: [{
+    routes: [{ //routes配置项配项可以称为路由记录
             path: '/computed',
             name: 'computed',
             redirect: '/',
@@ -165,6 +165,14 @@ let router = new Router({
             flg: true
           },
           component: () => {return import('./views/router/routeGuard/componentGuard.vue')}
+        },
+        { //路由元信息meta
+            path: '/metaRoute',
+            name: 'metaRoute',
+            meta: {
+                requiresAuth: true
+            },
+            component: () => {return import('./views/router/metaRoute/index.vue')}
         }
        
     ]

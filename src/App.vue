@@ -35,6 +35,8 @@
     <router-link to='/routeGuard'>路由守卫之一beforeEnter</router-link>
     <br>
     <router-link to='/componentGuard'>组件守卫---beforeRouteEnter</router-link>
+    <br>
+    <router-link to='/metaRoute'>路由元信息meta</router-link>
     
 
     <router-view></router-view>
