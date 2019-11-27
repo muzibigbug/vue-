@@ -195,6 +195,10 @@ let router = new Router({
                 path: 'dataHijack',
                 name: '数据劫持',
                 component: () => {return import('./views/otherKnowledge/dataHijack.vue')}
+            },{
+                path: 'bothwayDataBind',
+                name: '双向数据绑定',
+                component: () => {return import('./views/otherKnowledge/bothwayDataBind.vue')}
             }]
         }
        

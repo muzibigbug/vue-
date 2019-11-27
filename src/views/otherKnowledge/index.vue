@@ -8,6 +8,8 @@
         <router-link to='/otherKnowledge/dataBind'>数据绑定</router-link>
         <br>
         <router-link to='/otherKnowledge/dataHijack'>数据劫持</router-link>
+        <br>
+        <router-link to='/otherKnowledge/bothwayDataBind'>双向数据绑定</router-link>
 
         <hr>
         <router-view></router-view>
