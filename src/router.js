@@ -191,6 +191,10 @@ let router = new Router({
                 path: 'dataBind',
                 name: '数据绑定',
                 component: () => {return import('./views/otherKnowledge/dataBind.vue')}
+            },{
+                path: 'dataHijack',
+                name: '数据劫持',
+                component: () => {return import('./views/otherKnowledge/dataHijack.vue')}
             }]
         }
        
