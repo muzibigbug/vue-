@@ -174,6 +174,20 @@ let router = new Router({
                 requiresAuth: true
             },
             component: () => {return import('./views/router/metaRoute/index.vue')}
+        },
+        { //其他知识
+            path: '/otherKnowledge',
+            name: 'otherKnowledge',
+            component: () => {return import('./views/otherKnowledge/index.vue')},
+            children: [{
+                path: 'dataBrokers',
+                name: '数据代理',
+                component: () => {return import('./views/otherKnowledge/dataBrokers.vue')}
+            },{
+                path: 'templateParse',
+                name: '模板解析',
+                component: () => {return import('./views/otherKnowledge/templateParse.vue')}
+            }]
         }
        
     ]
