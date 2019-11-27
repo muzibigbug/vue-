@@ -11,7 +11,7 @@ export default {
             metaVal: false
         }
     },
-    beforeRouteEnter(to, from, next) {
+    beforeRouteEnter(to, from, next) { //导航守卫查看路由元信息
         console.log('meta', to)
         if(to.matched.some(record => record.meta.requiresAuth)) {
             next()

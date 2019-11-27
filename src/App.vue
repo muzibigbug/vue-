@@ -52,7 +52,7 @@
 export default {
   data() {
     return {
-      h1:'vue测试',
+      h1:'vue基础测试',
       h2:'渲染数据的第二种写法v-text',
       h3:'<div style="color:red;">渲染数据的第三种写法v-html</div>',
       h4:'<a href="javascript:;" >样式控制a标签</a>',
