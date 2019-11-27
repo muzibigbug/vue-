@@ -187,6 +187,10 @@ let router = new Router({
                 path: 'templateParse',
                 name: '模板解析',
                 component: () => {return import('./views/otherKnowledge/templateParse.vue')}
+            },{
+                path: 'dataBind',
+                name: '数据绑定',
+                component: () => {return import('./views/otherKnowledge/dataBind.vue')}
             }]
         }
        

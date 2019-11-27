@@ -4,6 +4,8 @@
         <router-link to='/otherKnowledge/dataBrokers'>数据代理</router-link>
         <br>
         <router-link to='/otherKnowledge/templateParse'>模板解析</router-link>
+        <br>
+        <router-link to='/otherKnowledge/dataBind'>数据绑定</router-link>
 
         <hr>
         <router-view></router-view>
