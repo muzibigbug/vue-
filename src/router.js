@@ -200,6 +200,23 @@ let router = new Router({
                 name: '双向数据绑定',
                 component: () => {return import('./views/otherKnowledge/bothwayDataBind.vue')}
             }]
+        },
+        {
+            path: '/vuex',
+            name: 'vuex共享数据',
+            component: () => {return import('./views/vuex/index.vue')},
+            children: [
+                {
+                    path: 'baseAPI',
+                    name: 'vuex 核心概念和 API',
+                    component: () => {return import('./views/vuex/baseAPI.vue')}
+                },
+                {
+                    path: 'baseAPI2',
+                    name: 'vuex 核心概念和 API 优化版',
+                    component: () => {return import('./views/vuex/baseAPI2.vue')}
+                }
+            ]
         }
        
     ]

@@ -39,6 +39,8 @@
     <router-link to='/metaRoute'>路由元信息meta</router-link>
     <br>
     <router-link to='/otherKnowledge'>其他知识</router-link>
+    <br>
+    <router-link to='/vuex'>vuex</router-link>
     
     <keep-alive>
       <router-view v-if="$route.meta.keepAlive"></router-view>
